@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styleaddlogo.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.ud2.AddLogoController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #ccd8e8;">
+         <children>
+            <Label alignment="TOP_LEFT" text="Add a Logo" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0">
+         <children>
+            <Label text="Logo ID" />
+            <TextField>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></TextField>
+            <Label text="Number of Stops">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Label>
+            <TextField>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></TextField>
+            <Button onAction="#generateStops" styleClass="button-green" text="Generate">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></Button>
+         </children></HBox>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="296.0" prefWidth="600.0" style="-fx-background-color: #ccd8e8;">
+         <content>
+            <VBox prefHeight="360.0" prefWidth="585.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="145.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
+                     <children>
+                        <Label text="Label" />
+                        <MenuButton mnemonicParsing="false" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

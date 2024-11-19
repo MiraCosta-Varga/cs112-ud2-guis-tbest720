@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="300.0" stylesheets="@stylecolorcard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.ud2.CreateColorCardController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #ccd8e8;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="94.0" text="Color Card">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="50.0" text="Logo ID:" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="91.0" text="(ID NUM)" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="37.0" text="(Year)" />
+                  <Label prefHeight="15.0" prefWidth="121.0" text="(ProductDescription)">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="27.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="33.0" text="(SKU)" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="445.0" prefWidth="300.0">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="445.0" prefWidth="285.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="283.0" style="-fx-background-color: #d3d3d3; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px; -fx-border-color:#b0b0b0;">
+                           <children>
+                              <Label text="Stop 1#">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></Label>
+                              <Label prefHeight="17.0" prefWidth="104.0" text="(THREAD CODE)">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="283.0" style="-fx-background-color: #d3d3d3; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px; -fx-border-color:#b0b0b0;">
+                           <children>
+                              <Label text="Stop 2#">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="104.0" text="(THREAD CODE)">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="42.0" prefHeight="32.0" prefWidth="283.0" style="-fx-background-color: #d3d3d3; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px; -fx-border-color:#b0b0b0;">
+                           <children>
+                              <Label text="Stop 3#">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="104.0" text="(THREAD CODE)">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

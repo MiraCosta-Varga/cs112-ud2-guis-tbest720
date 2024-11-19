@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" spacing="20.0" styleClass="vbox" stylesheets="@stylehome.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.ud2.HomeController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@ThreadiLogo.png" />
+         </image>
+      </ImageView>
+      <Label text="What would you like to do?" />
+      <HBox alignment="CENTER" prefHeight="169.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Button fx:id="addProductBtn" layoutX="240.0" layoutY="10.0" mnemonicParsing="false" onAction="#openAddProductWindow" prefHeight="150.0" prefWidth="200.0" text="Add New Product" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font></Button>
+            <Button fx:id="addLogoBtn" layoutY="10.0" mnemonicParsing="false" onAction="#openAddLogoWindow" prefHeight="150.0" prefWidth="200.0" text="Add New Logo" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="38.0" prefHeight="169.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Button fx:id="createCC" mnemonicParsing="false" onAction="#openColorCardWindow" prefHeight="150.0" prefWidth="200.0" text="Create Color Card" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="editProd" layoutX="200.0" layoutY="10.0" mnemonicParsing="false" onAction="#openEditProductWindow" prefHeight="150.0" prefWidth="200.0" text="Edit Existing Products" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" styleClass="button-red" text="Exit Threadi">
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
