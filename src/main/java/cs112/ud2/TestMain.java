@@ -27,7 +27,7 @@ public class TestMain {
 
         //Create a Staff Bag, and if no errors are found, add to productList
        StaffBag staffBag1 = ProductUtils.createStaffBag("N54321", 2025,"TOUR",
-               "1234", "1234", "1234", "1234", "1234", "1234",
+               "1111", "2222", "3333", "4444", "pppp", "tttt",
                true);
         System.out.println(staffBag1);
         if (standBag1 != null) {
@@ -41,6 +41,29 @@ public class TestMain {
         for (Product product : productList) {
             System.out.println(product);
         }
+
+
+
+        //Create new logo
+        Logo logo1 = null;
+        try {
+            logo1 = new Logo("000143-500", 6);
+        } catch (IvalidNumberOfStops inos) {
+            System.out.println(inos.getMessage());
+        }
+        //Set all stop index
+        logo1.setThreadCode(0,2);
+        logo1.setThreadCode(1,2);
+        logo1.setThreadCode(2,3);
+        logo1.setThreadCode(3,2);
+        logo1.setThreadCode(4,2);
+        logo1.setThreadCode(5,3);
+
+        //use helper method to grab thread codes from product
+        for (int i = 0 ; i < logo1.getNumberOfStops(); i++){
+            System.out.println("Stop #" + (i+1) + ": " +ProductUtils.assignThreadCodes(i,staffBag1,logo1.getThreadCode(i)));
+        }
+
 
     }
 }
