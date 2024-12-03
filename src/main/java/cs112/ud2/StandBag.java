@@ -21,6 +21,10 @@ public class StandBag extends Product {
                String productColor, String tonalColor,
                boolean ballPocket, boolean sidePocket, boolean qtrPanel)
             throws InvalidSkuException, InvalidYearException, InvalidThreadCodeException {
+        super(sku, year, modelDescription, color1, color2, color3, color4, productColor, tonalColor);
+        this.ballPocket = ballPocket;
+        this.sidePocket = sidePocket;
+        this.qtrPanel = qtrPanel;
 
     }
     //COPY CONSTRUCTOR
@@ -78,9 +82,9 @@ public class StandBag extends Product {
     public String toString() {
         return super.toString() +
                 ", Stand Bag{" +
-                "Ball Pocket = " + ballPocket +
-                ", Side Pocket = " + sidePocket +
-                ", Quarter Panerl = " + qtrPanel +
+                "Ball Pocket = " + this.ballPocket +
+                ", Side Pocket = " + this.sidePocket +
+                ", Quarter Panerl = " + this.qtrPanel +
                 '}';
     }
 
