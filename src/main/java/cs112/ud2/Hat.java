@@ -60,19 +60,19 @@ public class Hat extends Product {
 
     /****************************************************/
     // GETTERS
-    public boolean isFront() {
+    public boolean hasFront() {
         return front;
     }
 
-    public boolean isRightSide() {
+    public boolean hasRightSide() {
         return rightSide;
     }
 
-    public boolean isLeftSide() {
+    public boolean hasLeftSide() {
         return leftSide;
     }
 
-    public boolean isBackArch() {
+    public boolean hasBackArch() {
         return backArch;
     }
 

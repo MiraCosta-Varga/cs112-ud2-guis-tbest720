@@ -35,7 +35,7 @@ public class StandBag extends Product {
         this.qtrPanel = other.qtrPanel;
     }
     /****************************************************/
-
+  //SETTERS
    public void setBallPocket(boolean ballPocket) {
        this.ballPocket = ballPocket;
    }
@@ -50,15 +50,15 @@ public class StandBag extends Product {
     /****************************************************/
 
     // GETTERS
-    public boolean isBallPocket() {
+    public boolean hasBallPocket() {
         return ballPocket;
     }
 
-    public boolean isSidePocket() {
+    public boolean hasSidePocket() {
         return sidePocket;
     }
 
-    public boolean isQtrPanel() {
+    public boolean hasQtrPanel() {
         return qtrPanel;
     }
 

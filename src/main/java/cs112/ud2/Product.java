@@ -68,7 +68,7 @@ public abstract class Product {
 
     public void validateYear(int year) throws InvalidYearException {
         if (year < 2000 || year > 3000) {
-            throw new InvalidYearException("INVALID YEAR ENTERED: " + year);
+            throw new InvalidYearException("INVALID YEAR ENTERED: " + year + ". Must be between years 2000 & 3000");
         }
     }
 
