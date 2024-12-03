@@ -100,10 +100,10 @@ public class Hat extends Product {
     public String toString() {
         return super.toString() +
                 ", Hat{" +
-                "front=" + front +
-                ", rightSide=" + rightSide +
-                ", leftSide=" + leftSide +
-                ", backArch=" + backArch +
+                "front =" + front +
+                ", rightSide =" + rightSide +
+                ", leftSide =" + leftSide +
+                ", backArch =" + backArch +
                 '}';
     }
 
