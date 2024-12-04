@@ -48,7 +48,7 @@ public class TestMain {
         Logo logo1 = null;
         try {
             logo1 = new Logo("000143-500", 6);
-        } catch (IvalidNumberOfStops inos) {
+        } catch (InvalidNumberOfStops inos) {
             System.out.println(inos.getMessage());
         }
         //Set all stop index

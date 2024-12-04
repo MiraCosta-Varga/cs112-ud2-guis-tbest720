@@ -17,7 +17,7 @@ public class Logo {
     }
 
     //FULL CONSTRUCTOR
-    public Logo(String logoID, int numberOfStops) throws IvalidNumberOfStops {
+    public Logo(String logoID, int numberOfStops) throws InvalidNumberOfStops {
         validateNumberOfStops(numberOfStops);
         this.logoID = logoID;
         this.numberOfStops = numberOfStops;
@@ -25,9 +25,9 @@ public class Logo {
     }
 
     //EXCEPTION HANDLING METHOD
-    public void validateNumberOfStops(int numberOfStops) throws IvalidNumberOfStops {
+    public void validateNumberOfStops(int numberOfStops) throws InvalidNumberOfStops {
         if (numberOfStops < 1 || numberOfStops > 24) {
-            throw new IvalidNumberOfStops("INVALID NUMBER OF STOPS PROVIDED: " + numberOfStops + "number of stops must be between 1 and 24");
+            throw new InvalidNumberOfStops("INVALID NUMBER OF STOPS PROVIDED: " + numberOfStops + "number of stops must be between 1 and 24");
         }
     }
 
@@ -52,6 +52,10 @@ public class Logo {
         return numberOfStops;
     }
 
+    //TO STRING
+    public String toString() {
+        return "logoID: " + logoID + "\n Number of stops: " + numberOfStops;
 
+    }
 
 }
