@@ -97,7 +97,7 @@ public class AddLogoController {
     @FXML
     public void addLogo(ActionEvent event){
         try {
-            //If the user hasnt added a logo id and number of stops we give an alert and print to console
+            //If the user hasn't added a logo id and number of stops we give an alert and print to console
             if (logo == null) {
                 System.out.println("Please generate stops first.");
 
