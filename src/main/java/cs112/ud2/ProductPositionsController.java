@@ -33,7 +33,9 @@ public class ProductPositionsController {
         } else {
             Label warningLabel = new Label();
             warningLabel.setText("ERROR: Invalid Product Type.\nPlease close this popup and select a valid product type.");
+            positionsVBox.getChildren().add(warningLabel);
         }
+
 
     }
 
@@ -45,5 +47,7 @@ public class ProductPositionsController {
         positionsVBox.getChildren().add(checkBox);
 
     }
+
+
 }
 

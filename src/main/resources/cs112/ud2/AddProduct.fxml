@@ -16,17 +16,12 @@
                   <Insets right="10.0" />
                </HBox.margin>
              ></Label>
-            <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" text="Choose...">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-
+            <MenuButton fx:id="productTypeMenuButton" alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" text="Choose...">
             </MenuButton>
             <Label alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="113.0" text="Product SKU:" textAlignment="RIGHT">
 
             </Label>
-            <TextField alignment="CENTER" prefHeight="39.0" prefWidth="149.0">
+            <TextField fx:id="productSkuTextField" alignment="CENTER" prefHeight="39.0" prefWidth="149.0">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
@@ -44,14 +39,14 @@
                </HBox.margin>
 
             </Label>
-            <TextField alignment="CENTER" prefHeight="39.0" prefWidth="149.0" />
+            <TextField fx:id="productDescriptionTextField" alignment="CENTER" prefHeight="39.0" prefWidth="149.0" />
             <Label alignment="CENTER" layoutX="60.0" layoutY="10.0" prefHeight="30.0" prefWidth="41.0" text="Year:" textAlignment="CENTER">
 
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
             </Label>
-            <TextField alignment="CENTER" layoutX="286.0" layoutY="10.0" prefHeight="33.0" prefWidth="99.0" />
+            <TextField fx:id="yearTextField" alignment="CENTER" layoutX="286.0" layoutY="10.0" prefHeight="33.0" prefWidth="99.0" />
          </children>
          <VBox.margin>
             <Insets bottom="10.0" top="5.0" />
@@ -69,28 +64,28 @@
                </HBox.margin>
 
             </Label>
-            <TextField alignment="CENTER" prefHeight="33.0" prefWidth="59.0" />
+            <TextField fx:id="colorOneTextField" alignment="CENTER" prefHeight="33.0" prefWidth="59.0" />
             <Label alignment="CENTER" layoutX="35.0" layoutY="10.0" prefHeight="31.0" prefWidth="53.0" text="Color 2:" textAlignment="CENTER">
 
                <HBox.margin>
                   <Insets left="10.0" right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField alignment="CENTER" layoutX="149.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0" />
+            <TextField fx:id="colorTwoTextField" alignment="CENTER" layoutX="149.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0" />
             <Label alignment="CENTER" layoutX="35.0" layoutY="10.0" prefHeight="31.0" prefWidth="54.0" text="Color 3:" textAlignment="CENTER">
 
                <HBox.margin>
                   <Insets left="10.0" right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField alignment="CENTER" layoutX="441.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0" />
+            <TextField fx:id="colorThreeTextField" alignment="CENTER" layoutX="441.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0" />
             <Label alignment="CENTER" layoutX="158.0" layoutY="10.0" prefHeight="31.0" prefWidth="54.0" text="Color 4:" textAlignment="CENTER">
 
                <HBox.margin>
                   <Insets left="10.0" right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField alignment="CENTER" layoutX="208.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0" />
+            <TextField fx:id="colorFourTextField" alignment="CENTER" layoutX="208.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
@@ -104,14 +99,14 @@
                   <Insets left="29.0" right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField alignment="CENTER" prefHeight="33.0" prefWidth="59.0" />
+            <TextField fx:id="bagColorTextField" alignment="CENTER" prefHeight="33.0" prefWidth="59.0" />
             <Label alignment="CENTER" layoutX="35.0" layoutY="10.0" prefHeight="31.0" prefWidth="81.0" text="Tonal Color:" textAlignment="CENTER">
 
                <HBox.margin>
                   <Insets left="105.0" />
                </HBox.margin>
             </Label>
-            <TextField alignment="CENTER" layoutX="133.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0">
+            <TextField fx:id="tonalColorTextField" alignment="CENTER" layoutX="133.0" layoutY="10.0" prefHeight="33.0" prefWidth="59.0">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin></TextField>
@@ -127,9 +122,9 @@
       </Rectangle>
       <HBox alignment="CENTER" prefHeight="105.0" prefWidth="600.0" style="-fx-background-color: #ccd8e8;">
          <children>
-            <Button onAction="#addProduct" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" styleClass="button-green" text="Add Product" textFill="WHITE">
+            <Button fx:id="addProductButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduct" prefHeight="40.0" prefWidth="123.0" styleClass="button-green" text="Add Product" textFill="WHITE">
                </Button>
-            <Button onAction="#exitWindow" contentDisplay="CENTER" layoutX="249.0" layoutY="43.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" styleClass="button-red" text="Cancel" textFill="WHITE">
+            <Button contentDisplay="CENTER" layoutX="249.0" layoutY="43.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" styleClass="button-red" text="Cancel" textFill="WHITE">
                <HBox.margin>
                   <Insets left="40.0" />
                </HBox.margin>
