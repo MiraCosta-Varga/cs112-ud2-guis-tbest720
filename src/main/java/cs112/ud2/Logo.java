@@ -52,6 +52,10 @@ public class Logo {
         return numberOfStops;
     }
 
+    public String getLogoID() {
+        return logoID;
+    }
+
     //TO STRING
     public String toString() {
         return "logoID: " + logoID + "\n Number of stops: " + numberOfStops;

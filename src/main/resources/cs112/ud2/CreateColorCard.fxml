@@ -19,7 +19,7 @@
             <HBox alignment="CENTER">
                <children>
                   <Label prefHeight="15.0" prefWidth="50.0" text="Logo ID:" />
-                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="91.0" text="(ID NUM)" />
+                  <Label fx:id="logoIDLabel" alignment="CENTER" prefHeight="17.0" prefWidth="91.0" text="(ID NUM)" />
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
@@ -27,8 +27,8 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="37.0" text="(Year)" />
-                  <Label prefHeight="15.0" prefWidth="121.0" text="(ProductDescription)">
+                  <Label fx:id="yearLabel" alignment="CENTER" prefHeight="15.0" prefWidth="37.0" text="(Year)" />
+                  <Label fx:id="productDescriptionLabel" prefHeight="15.0" prefWidth="121.0" text="(ProductDescription)">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin></Label>
@@ -39,7 +39,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="27.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="15.0" prefWidth="33.0" text="(SKU)" />
+                  <Label fx:id="skuLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="196.0" text="(SKU)" />
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" />
@@ -47,7 +47,7 @@
             </HBox>
             <ScrollPane hbarPolicy="NEVER" prefHeight="445.0" prefWidth="300.0">
                <content>
-                  <VBox alignment="TOP_CENTER" prefHeight="388.0" prefWidth="285.0" />
+                  <VBox fx:id="stopDetailsVbox" alignment="TOP_CENTER" prefHeight="388.0" prefWidth="285.0" />
                </content>
             </ScrollPane>
          </children>

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="300.0" stylesheets="@stylecardinfo.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="300.0" stylesheets="@stylecardinfo.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.ud2.CardInfoController">
    <children>
       <Label text="Enter Color Card Info">
          <VBox.margin>
@@ -28,7 +28,7 @@
                   <Insets right="20.0" />
                </padding>
             </Label>
-            <TextField fx:id="productSkuTectField">
+            <TextField fx:id="productSkuTextField">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -61,6 +61,6 @@
             <Insets bottom="15.0" />
          </VBox.margin>
       </HBox>
-      <Button mnemonicParsing="false" styleClass="button-green" text="Generate Color Card" />
+      <Button fx:id="generateColorCardButton" onAction="#setProductLogoValues" styleClass="button-green" text="Generate Color Card" />
    </children>
 </VBox>

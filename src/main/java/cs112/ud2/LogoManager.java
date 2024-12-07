@@ -82,5 +82,15 @@ public class LogoManager {
         System.out.println("_______________________________\n");
     }
 
+    public static Logo getLogoByID(String logoID) {
+
+        for (Logo logoTemp : logoList) {
+            if(logoTemp.getLogoID().equals(logoID)){
+                return logoTemp;
+            }
+        }
+        return null;
+    }
+
 
 }

@@ -1,11 +1,10 @@
 package cs112.ud2;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProductUtils {
 
-    private static final ArrayList<Product> products = new ArrayList<>();
+    private static final ArrayList<Product> productsList = new ArrayList<>();
 
     //Adding Default Products
     public static void initializeDefaultProducts() {
@@ -34,26 +33,27 @@ public class ProductUtils {
                 "2840", "2845", "2850", "2855", "2860", "2865",
                 true));
         System.out.println("Default products added successfully!");
-        ProductUtils.getProducts().forEach(System.out::println);
+        ProductUtils.getProductsList().forEach(System.out::println);
     }
 
+
     public static void printProducts() {
-        if (products.isEmpty()) {
+        if (productsList.isEmpty()) {
             System.out.println("No products in the list.");
         } else {
             System.out.println("Products in the list:");
-            for (Product product : products) {
+            for (Product product : productsList) {
                 System.out.println(product);
             }
         }
     }
 
     public static void addProduct(Product product) {
-        products.add(product);
+        productsList.add(product);
     }
 
-    public static ArrayList<Product> getProducts() {
-        return products;
+    public static ArrayList<Product> getProductsList() {
+        return productsList;
     }
 
 
@@ -224,6 +224,16 @@ public class ProductUtils {
 
         }
         return threadCode;
+    }
+
+    public static Product getProductBySku(String sku) {
+        for (Product productTemp : productsList) {
+            if (productTemp.getSku().equals(sku)) {
+                return productTemp; // Return the product if found
+            }
+        }
+        return null;
+
     }
 
 

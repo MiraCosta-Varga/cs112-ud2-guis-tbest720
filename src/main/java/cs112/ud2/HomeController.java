@@ -83,20 +83,25 @@ public class HomeController {
 
     }
 
-    public void openColorCardWindow() {
+    public void openCardInfo(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("CreateColorCard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CardInfo.fxml"));
             Parent root = loader.load();
 
             // Create a new stage (window)
             Stage colorCardStage = new Stage();
             colorCardStage.setTitle("Color Card");
-            colorCardStage.setScene(new Scene(root, 300, 300));
+            colorCardStage.setScene(new Scene(root));
             colorCardStage.setResizable(false);
             colorCardStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
+
+
 }
