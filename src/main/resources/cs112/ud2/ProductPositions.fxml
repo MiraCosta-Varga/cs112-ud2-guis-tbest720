@@ -7,7 +7,7 @@
 
 <VBox fx:id="positionsVBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.ud2.ProductPositionsController">
    <children>
-      <Label alignment="CENTER" prefHeight="26.0" prefWidth="300.0" text="Choose Open Postions" textAlignment="CENTER">
+      <Label alignment="CENTER" prefHeight="26.0" prefWidth="300.0" text="Choose Open Positions" textAlignment="CENTER">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
@@ -15,10 +15,13 @@
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
       </Label>
-      <VBox prefHeight="200.0" prefWidth="100.0" />
-      <Button alignment="CENTER" mnemonicParsing="false" text="Confirm">
+      <!-- Dedicated VBox for dynamically added checkboxes -->
+      <VBox fx:id="checkboxContainer" prefHeight="150.0" prefWidth="250.0" />
+      <!-- Confirm Button -->
+      <Button alignment="CENTER" mnemonicParsing="false" text="Confirm" onAction="#confirmPositions">
          <font>
             <Font size="14.0" />
-         </font></Button>
+         </font>
+      </Button>
    </children>
 </VBox>

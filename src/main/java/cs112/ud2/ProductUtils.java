@@ -1,6 +1,63 @@
 package cs112.ud2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ProductUtils {
+
+    private static final ArrayList<Product> products = new ArrayList<>();
+
+    //Adding Default Products
+    public static void initializeDefaultProducts() {
+        ProductUtils.addProduct(ProductUtils.createStandBag(
+                "N12345", 2023, "FlexTechStandBag",
+                "2250", "2255", "2290", "2295", "2300", "2305",
+                true, true, true));
+
+        ProductUtils.addProduct(ProductUtils.createStandBag(
+                "N67890", 2021, "DeluxeCartBag",
+                "2450", "2460", "2475", "2480", "2485", "2490",
+                true, false, true));
+
+        ProductUtils.addProduct(ProductUtils.createHat(
+                "N11122", 2025, "TourRadarHat",
+                "2580", "2585", "2590", "2595", "2600", "2605",
+                true, true, true, true));
+
+        ProductUtils.addProduct(ProductUtils.createHat(
+                "N33344", 2020, "PerformanceHat",
+                "2700", "2705", "2710", "2715", "2720", "2725",
+                true, false, true, false));
+
+        ProductUtils.addProduct(ProductUtils.createStaffBag(
+                "N55566", 2024, "TourStaffBag",
+                "2840", "2845", "2850", "2855", "2860", "2865",
+                true));
+        System.out.println("Default products added successfully!");
+        ProductUtils.getProducts().forEach(System.out::println);
+    }
+
+    public static void printProducts() {
+        if (products.isEmpty()) {
+            System.out.println("No products in the list.");
+        } else {
+            System.out.println("Products in the list:");
+            for (Product product : products) {
+                System.out.println(product);
+            }
+        }
+    }
+
+    public static void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public static ArrayList<Product> getProducts() {
+        return products;
+    }
+
+
+
     /**CREATE HAT
      * Creates a Hat object with the specified properties.
      *

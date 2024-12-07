@@ -13,12 +13,16 @@ import javafx.event.ActionEvent;
 import java.awt.*;
 import java.io.IOException;
 
+
+
 public class AddProductController {
+    //Create Menubuttons and items to add
     @FXML private MenuButton productTypeMenuButton;
     @FXML private MenuItem standBag;
     @FXML private MenuItem staffBag;
     @FXML private MenuItem hat;
 
+    //Initialize the page with the MenuItems added
     public void initialize() {
         standBag = new MenuItem("Stand Bag");
         staffBag = new MenuItem("Staff Bag");
@@ -33,7 +37,7 @@ public class AddProductController {
 
 
 
-
+    //Create all the text fields
     @FXML private TextField productSkuTextField;
     @FXML private TextField productDescriptionTextField;
     @FXML private TextField yearTextField;
@@ -54,7 +58,7 @@ public class AddProductController {
 
     @FXML void addProduct(ActionEvent event) {
 
-        System.out.println("addProduct");
+        //Grab strings and ints from all the elements on the page
         String productType = productTypeMenuButton.getText();
         String sku = productSkuTextField.getText();
         String description = productDescriptionTextField.getText();
@@ -66,54 +70,38 @@ public class AddProductController {
         String bagColor = bagColorTextField.getText();
         String tonalColor = tonalColorTextField.getText();
 
+        //If the product type is a stand bag, create a stand bag
         if (productType.equals("Stand Bag")) {
-            StandBag standBag = null;
-            try{
-                standBag = new StandBag(sku,year, description,colorOne,colorTwo,colorThree,colorFour,
-                        bagColor,tonalColor, true, true,true);
-            }catch (InvalidSkuException ise) {
-                ise.getMessage();
-            }catch (InvalidYearException iye) {
-                iye.getMessage();
-            }catch (InvalidThreadCodeException itce){
-                itce.getMessage();
-            }
+            StandBag standBag = ProductUtils.createStandBag(sku,year, description,colorOne,colorTwo,colorThree,colorFour,
+                    bagColor,tonalColor, true, true,true); //Call method from ProductUtils Class
+
             System.out.println("Product Added: " + standBag);
-
+            openProductPositions(standBag);
         }
+
+        //If the product type is a hat, create a hat
         if (productType.equals("Hat")) {
-            Hat hat = null;
-            try{
-                hat = new Hat(sku,year, description,colorOne,colorTwo,colorThree,colorFour,
-                        bagColor,tonalColor, true, true,true,true);
-            }catch (InvalidSkuException ise) {
-                ise.getMessage();
-            }catch (InvalidYearException iye) {
-                iye.getMessage();
-            }catch (InvalidThreadCodeException itce){
-                itce.getMessage();
-            }
-            System.out.println("Product Added: " + hat);
+            Hat hat = ProductUtils.createHat(sku,year, description,colorOne,colorTwo,colorThree,colorFour,
+                    bagColor,tonalColor, true, true,true,true); //Call method from ProductUtils Class
 
+            System.out.println("Product Added: " + hat);
+            openProductPositions(hat);
+
+        //If the product type is a Staff bag, create a Staff Bag
         }if (productType.equals("Staff Bag")) {
-            StaffBag staffBag = null;
-            try {
-                staffBag = new StaffBag(sku, year, description, colorOne, colorTwo, colorThree, colorFour,
-                        bagColor, tonalColor, true);
-            }catch (InvalidSkuException ise) {
-                ise.getMessage();
-            }catch (InvalidYearException iye) {
-                iye.getMessage();
-            }catch (InvalidThreadCodeException itce){
-                itce.getMessage();
-            }
+            StaffBag staffBag = ProductUtils.createStaffBag(sku, year, description, colorOne, colorTwo, colorThree, colorFour,
+                    bagColor, tonalColor, true); //Call method from ProductUtils Class
+
             System.out.println("Product Added: " + staffBag);
+            openProductPositions(staffBag);
         }
-        openProductPositions(productType);
+
+        //Open the Product positions popup and pass in the product type
+
 
     }
 
-    public void openProductPositions(String productType) {
+    public void openProductPositions(Product product) {
         try {
 
             // Load the CreateProduct.fxml file
@@ -121,7 +109,8 @@ public class AddProductController {
             Parent root = loader.load();
 
             ProductPositionsController controller = loader.getController();
-            controller.initializePositions(productType);
+            controller.setProduct(product); // initialise the product positions popup with the correct product type
+            //so that the correct checkboxes show up.
 
             // Create a new window
             Stage productPositionsStage  = new Stage();
