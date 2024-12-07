@@ -20,6 +20,7 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         ProductUtils.initializeDefaultProducts();
+        LogoManager.initializeDefaultLogoList();
         launch();
 
     }
