@@ -60,7 +60,7 @@ public class CreateColorCardController {
     public void createStopDetail(Logo logo, Product product) {
         stopDetailsVbox.getChildren().clear();
         for (int i = 0 ; i < logo.getNumberOfStops(); i++){
-            HBox colorStopHBox= createColorStopHBox(i,product);
+            HBox colorStopHBox= createColorStopHBox(logo.getThreadCode(i),product,i);
             stopDetailsVbox.getChildren().add(colorStopHBox);
 
         }
@@ -69,7 +69,7 @@ public class CreateColorCardController {
     }
 
 
-    private HBox createColorStopHBox(int stopIndex, Product product) {
+    private HBox createColorStopHBox(int stopIndex, Product product, int i) {
         String threadCode;
         switch (stopIndex) {
             case 0:
@@ -98,7 +98,7 @@ public class CreateColorCardController {
         colorStopHBox.setSpacing(10);
         colorStopHBox.setStyle("-fx-padding: 10; -fx-background-color: #f0f0f0; -fx-border-color: #d3d3d3; -fx-alignment: center;");
 
-        Label stopLabel = new Label("Stop #" + (stopIndex + 1) + ":" + threadCode);
+        Label stopLabel = new Label("Stop #" + (i + 1) + ": " + threadCode);
         colorStopHBox.getChildren().add(stopLabel);
 
         return colorStopHBox;

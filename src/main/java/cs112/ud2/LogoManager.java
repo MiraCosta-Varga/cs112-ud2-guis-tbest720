@@ -21,7 +21,7 @@ public class LogoManager {
             logo2 = new Logo("541332-001",4);
             logo3 = new Logo("558942-002",1);
             logo4 = new Logo("558942-501",1);
-            logo5 = new Logo("558942-501",4);
+            logo5 = new Logo("558942-502",4);
             logo6 = new Logo("558942-503",10);
 
         }catch (InvalidNumberOfStops inos){
@@ -29,33 +29,33 @@ public class LogoManager {
         }
         //Set Thread codes for each logo
         //Logo1
-        logo1.setThreadCode(0,1086);
-        logo1.setThreadCode(1,1000);
+        logo1.setThreadCode(0,0);
+        logo1.setThreadCode(1,1);
         //Logo2
-        logo2.setThreadCode(0,1147);
-        logo2.setThreadCode(1,2613);
-        logo2.setThreadCode(2,1147);
-        logo2.setThreadCode(3,1147);
+        logo2.setThreadCode(0,1);
+        logo2.setThreadCode(1,1);
+        logo2.setThreadCode(2,2);
+        logo2.setThreadCode(3,1);
         //Logo3
-        logo3.setThreadCode(0,1000);
+        logo3.setThreadCode(0,1);
         //Logo4
-        logo4.setThreadCode(0,1118);
+        logo4.setThreadCode(0,1);
         //Logo5
-        logo5.setThreadCode(0,2613);
-        logo5.setThreadCode(1,1000);
-        logo5.setThreadCode(2,1147);
-        logo5.setThreadCode(3,2613);
+        logo5.setThreadCode(0,2);
+        logo5.setThreadCode(1,3);
+        logo5.setThreadCode(2,1);
+        logo5.setThreadCode(3,1);
         //logo6
-        logo6.setThreadCode(0, 1086);
-        logo6.setThreadCode(1, 1147);
-        logo6.setThreadCode(2, 2613);
-        logo6.setThreadCode(3, 1118);
-        logo6.setThreadCode(4, 1000);
-        logo6.setThreadCode(5, 2613);
-        logo6.setThreadCode(6, 1147);
-        logo6.setThreadCode(7, 1086);
-        logo6.setThreadCode(8, 1118);
-        logo6.setThreadCode(9, 1000);
+        logo6.setThreadCode(0, 1);
+        logo6.setThreadCode(1, 1);
+        logo6.setThreadCode(2, 2);
+        logo6.setThreadCode(3, 2);
+        logo6.setThreadCode(4, 3);
+        logo6.setThreadCode(5, 3);
+        logo6.setThreadCode(6, 4);
+        logo6.setThreadCode(7, 4);
+        logo6.setThreadCode(8, 0);
+        logo6.setThreadCode(9, 5);
 
         logoList.add(logo1);
         logoList.add(logo2);
