@@ -14,6 +14,7 @@ public class LogoManager {
         Logo logo3 = null;
         Logo logo4 = null;
         Logo logo5 = null;
+        Logo logo6 = null;
 
         try{
             logo1 = new Logo("000143-500",2);
@@ -21,6 +22,7 @@ public class LogoManager {
             logo3 = new Logo("558942-002",1);
             logo4 = new Logo("558942-501",1);
             logo5 = new Logo("558942-501",4);
+            logo6 = new Logo("558942-503",10);
 
         }catch (InvalidNumberOfStops inos){
             inos.getMessage();
@@ -43,12 +45,24 @@ public class LogoManager {
         logo5.setThreadCode(1,1000);
         logo5.setThreadCode(2,1147);
         logo5.setThreadCode(3,2613);
+        //logo6
+        logo6.setThreadCode(0, 1086);
+        logo6.setThreadCode(1, 1147);
+        logo6.setThreadCode(2, 2613);
+        logo6.setThreadCode(3, 1118);
+        logo6.setThreadCode(4, 1000);
+        logo6.setThreadCode(5, 2613);
+        logo6.setThreadCode(6, 1147);
+        logo6.setThreadCode(7, 1086);
+        logo6.setThreadCode(8, 1118);
+        logo6.setThreadCode(9, 1000);
 
         logoList.add(logo1);
         logoList.add(logo2);
         logoList.add(logo3);
         logoList.add(logo4);
         logoList.add(logo5);
+        logoList.add(logo6);
 
         System.out.println("Default Logos added successfully!");
         for (Logo logo : logoList) {

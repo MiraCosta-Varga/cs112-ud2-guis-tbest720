@@ -45,9 +45,9 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </HBox>
-            <ScrollPane hbarPolicy="NEVER" prefHeight="445.0" prefWidth="300.0">
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="445.0" prefWidth="300.0">
                <content>
-                  <VBox fx:id="stopDetailsVbox" alignment="TOP_CENTER" prefHeight="388.0" prefWidth="285.0" />
+                  <VBox fx:id="stopDetailsVbox" alignment="TOP_CENTER" maxHeight="1200.0" prefHeight="1070.0" prefWidth="285.0" />
                </content>
             </ScrollPane>
          </children>
