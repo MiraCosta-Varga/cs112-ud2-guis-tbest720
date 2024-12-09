@@ -10,10 +10,13 @@ Threadi offers the ability to add and manage different product types along with 
 
 
 ## GUI Wireframe
+
 [ThreadiWireFrame.pdf](https://github.com/user-attachments/files/17810024/ThreadiWireFrame.pdf)
 
 ##UML Diagram
+
 ![threadiUML (1)](https://github.com/user-attachments/assets/9d7d5540-4f0a-475e-af85-34b4aeb47dac)
 
 ##Threadi Example
+
 ![ThreadiWalkthrough](https://github.com/user-attachments/assets/5cf9897a-0eed-46b7-befd-3468b1ce3568)
