@@ -1,0 +1,73 @@
+
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url("CenturyGothic.ttf");
+}
+
+.label, .menu-button, .text-field, .button-green, .button-red {
+    -fx-font-family: "Century Gothic";
+}
+.vbox {
+ /*Add VBox style*/
+}
+
+.hbox {
+    -fx-border-width: 2px;
+    -fx-border-color: #b3b4b5;
+}
+
+.label {
+
+    -fx-text-fill: #404040;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 12px;
+}
+
+
+
+/* Styling for MenuButton */
+.menu-button {
+    -fx-background-color: #e9eef5;
+    -fx-background-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-border-color: #b3b4b5;
+    -fx-border-radius: 5px;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 12px;
+}
+
+/* Styling for TextField */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #b3b4b5;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 12px;
+}
+
+/* Styling for buttons */
+.button-green {
+    -fx-background-color: #32ab30;
+    -fx-background-radius: 5px;
+    -fx-border-color: #178a15;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: WHITE;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 12px;
+}
+
+.button-red {
+    -fx-background-color: #c21021;
+    -fx-background-radius: 5px;
+    -fx-border-color: #990b19;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: WHITE;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 12px;
+}
+

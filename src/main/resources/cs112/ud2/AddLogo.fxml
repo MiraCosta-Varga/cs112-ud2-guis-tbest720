@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@styleaddlogo.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.ud2.AddLogoController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #ccd8e8;">
+         <children>
+            <Label alignment="TOP_LEFT" text="Add a Logo" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0">
+         <children>
+            <Label text="Logo ID" />
+            <TextField fx:id="logoIDField">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></TextField>
+            <Label text="Number of Stops">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="numberOfStopsField">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></TextField>
+            <Button onAction="#generateStops" styleClass="button-green" text="Generate">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></Button>
+         </children></HBox>
+      <ScrollPane fx:id="stopsScrollPane" hbarPolicy="NEVER" prefHeight="296.0" prefWidth="600.0" style="-fx-background-color: #ccd8e8;">
+         <content>
+            <VBox fx:id="stopsVBox" prefHeight="300.0" prefWidth="585.0" />
+         </content>
+      </ScrollPane>
+      <Button mnemonicParsing="false" onAction="#addLogo" styleClass="button-green" stylesheets="@styleaddlogo.css" text="Add Logo">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Button>
+   </children>
+</VBox>
