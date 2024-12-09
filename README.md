@@ -1,7 +1,7 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17210681)
 # Unit Deliverable 2 - Final Project GUI
 
-## Threadi
+# Threadi
 
 A software designed to create coordinated color cards for commercial embroidery applications.
 
@@ -9,14 +9,14 @@ Threadi offers the ability to add and manage different product types along with 
 
 
 
-## GUI Wireframe
+# GUI Wireframe
 
 [ThreadiWireFrame.pdf](https://github.com/user-attachments/files/17810024/ThreadiWireFrame.pdf)
 
-##UML Diagram
+#UML Diagram
 
 ![threadiUML (1)](https://github.com/user-attachments/assets/9d7d5540-4f0a-475e-af85-34b4aeb47dac)
 
-##Threadi Example
+#Threadi Example
 
 ![ThreadiWalkthrough](https://github.com/user-attachments/assets/5cf9897a-0eed-46b7-befd-3468b1ce3568)
