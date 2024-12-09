@@ -34,27 +34,10 @@
          </children></HBox>
       <ScrollPane fx:id="stopsScrollPane" hbarPolicy="NEVER" prefHeight="296.0" prefWidth="600.0" style="-fx-background-color: #ccd8e8;">
          <content>
-            <VBox  fx:id="stopsVBox" prefHeight="300.0" prefWidth="585.0">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="600.0" styleClass="hbox">
-                     <children>
-                        <Label text="Label" />
-                        <MenuButton mnemonicParsing="false" text="MenuButton">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
-                          </items>
-                           <HBox.margin>
-                              <Insets left="100.0" />
-                           </HBox.margin>
-                        </MenuButton>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
+            <VBox fx:id="stopsVBox" prefHeight="300.0" prefWidth="585.0" />
          </content>
       </ScrollPane>
-      <Button onAction="#addLogo" mnemonicParsing="false" styleClass="button-green" stylesheets="@styleaddlogo.css" text="Add Logo">
+      <Button mnemonicParsing="false" onAction="#addLogo" styleClass="button-green" stylesheets="@styleaddlogo.css" text="Add Logo">
          <VBox.margin>
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>

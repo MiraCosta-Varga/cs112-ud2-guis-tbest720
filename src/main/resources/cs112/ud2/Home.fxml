@@ -48,7 +48,7 @@
             </Button>
          </children>
       </HBox>
-      <Button mnemonicParsing="false" styleClass="button-red" text="Exit Threadi">
+      <Button mnemonicParsing="false" styleClass="button-red" text="Exit Threadi" onAction="#exitApplication">
          <VBox.margin>
             <Insets bottom="20.0" />
          </VBox.margin>

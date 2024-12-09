@@ -23,6 +23,7 @@ public class CreateColorCardController {
     @FXML private ScrollPane scrollPane;
 
     @FXML private VBox stopDetailsVbox;
+    @FXML private HBox positionsHBox;
 
 
 
@@ -36,6 +37,7 @@ public class CreateColorCardController {
         logo = LogoManager.getLogoByID(logoID);
 
         if (product != null) {
+            addPositions(product);
             skuLabel.setText("SKU: " + product.getSku());
             productDescriptionLabel.setText(product.getModelDescription());
             yearLabel.setText(Integer.toString(product.getYear()));
@@ -68,6 +70,71 @@ public class CreateColorCardController {
 
     }
 
+    public void addPositions(Product product) {
+        positionsHBox.getChildren().clear();
+        if (product instanceof StandBag){
+            StandBag standBag = (StandBag) product;
+            boolean hasBallPocket = standBag.hasBallPocket();
+            boolean hasSidePocket = standBag.hasSidePocket();
+            boolean hasQuarterPanel = standBag.hasQtrPanel();
+            if (hasBallPocket == true){
+                Label label = createPositionsLabel("Ball Pocket");
+                positionsHBox.getChildren().add(label);
+            }
+            if (hasSidePocket == true){
+                Label label = createPositionsLabel("Side Pocket");
+                positionsHBox.getChildren().add(label);
+            }
+            if (hasQuarterPanel == true){
+                Label label = createPositionsLabel("Quarter Panel");
+                positionsHBox.getChildren().add(label);
+
+            }
+            if (hasBallPocket == false && hasSidePocket == false &&hasQuarterPanel == false ){
+                Label label = createPositionsLabel("No Open Positions");
+                positionsHBox.getChildren().add(label);
+            }
+        }
+        if (product instanceof StaffBag){
+            StaffBag staffBag = (StaffBag) product;
+            boolean hasBellyPanel = staffBag.hasBellyPanel();
+            if (hasBellyPanel == true){
+                Label label = createPositionsLabel("Belly Panel");
+                positionsHBox.getChildren().add(label);
+            } else {
+                Label label = createPositionsLabel("No Open Positions");
+                positionsHBox.getChildren().add(label);
+            }
+        }
+        if (product instanceof Hat){
+            Hat hat = (Hat) product;
+            boolean hasRightSide = hat.hasRightSide();
+            boolean hasLeftSide = hat.hasLeftSide();
+            boolean hasBackArch = hat.hasBackArch();
+            boolean hasFront = hat.hasFront();
+            if (hasBackArch == true){
+                Label label = createPositionsLabel("Back Arch");
+                positionsHBox.getChildren().add(label);
+            }
+            if (hasFront == true){
+                Label label = createPositionsLabel("Front");
+                positionsHBox.getChildren().add(label);
+            }
+            if (hasLeftSide == true){
+                Label label = createPositionsLabel("Left Side");
+                positionsHBox.getChildren().add(label);
+            }
+            if (hasRightSide == true){
+                Label label = createPositionsLabel("Right Side");
+                positionsHBox.getChildren().add(label);
+            }
+            if (hasBackArch == false && hasFront == false && hasLeftSide == false && hasRightSide == false ){
+                Label label = createPositionsLabel("No Open Positions");
+                positionsHBox.getChildren().add(label);
+            }
+        }
+
+    }
 
     private HBox createColorStopHBox(int stopIndex, Product product, int i) {
         String threadCode;
@@ -104,6 +171,12 @@ public class CreateColorCardController {
         return colorStopHBox;
 
     }
+    private Label createPositionsLabel(String position) {
+        Label label = new Label(position);
+        label.setStyle("-fx-padding: 10; -fx-background-color: #5b95cf; -fx-border-color: #2c5782; -fx-border-radius: 5; -fx-background-radius: 5;");
+        return label;
+    }
+
 
 
 }

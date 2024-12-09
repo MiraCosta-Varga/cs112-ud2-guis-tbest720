@@ -124,11 +124,6 @@
          <children>
             <Button fx:id="addProductButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduct" prefHeight="40.0" prefWidth="123.0" styleClass="button-green" text="Add Product" textFill="WHITE">
                </Button>
-            <Button contentDisplay="CENTER" layoutX="249.0" layoutY="43.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" styleClass="button-red" text="Cancel" textFill="WHITE">
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </Button>
          </children>
          <opaqueInsets>
             <Insets />

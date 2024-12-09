@@ -1,5 +1,6 @@
 package cs112.ud2;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,7 +23,7 @@ public class HomeController {
     public void openAddProductWindow() {
             try {
 
-                // Load the CreateProduct.fxml file
+                // Load the AddProduct.fxml file
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("AddProduct.fxml"));
                 Parent root = loader.load();
 
@@ -99,6 +100,12 @@ public class HomeController {
             e.printStackTrace();
         }
 
+    }
+
+    @FXML
+    public void exitApplication() {
+        Platform.exit();
+        System.exit(0);
     }
 
 

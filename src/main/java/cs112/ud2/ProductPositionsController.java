@@ -37,6 +37,7 @@ public class ProductPositionsController {
 
     public void initializePositions(String productType) {
         checkboxContainer.getChildren().clear();
+        checkboxContainer.setStyle("-fx-padding: 0 0 0 100;");
         checkBoxes.clear();
         if(productType.equals("Stand Bag")){
             addCheckBox("Ball Pocket");
@@ -66,6 +67,15 @@ public class ProductPositionsController {
         CheckBox checkBox = new CheckBox(position);
         checkBoxes.add(checkBox);
         checkboxContainer.getChildren().add(checkBox);
+        checkBox.setStyle("-fx-padding: 5;" +
+                "-fx-border-color: #b0b0b0;" +
+                "-fx-border-radius: 5;" +
+                "-fx-background-radius: 5;" +
+                "-fx-background-color: #f0f0f0;" +
+                "-fx-font-size: 12px;" +
+                "-fx-text-fill: #333333;" +
+                "-fx-font-family: 'Century Gothic';"
+        );
 
     }
     @FXML
