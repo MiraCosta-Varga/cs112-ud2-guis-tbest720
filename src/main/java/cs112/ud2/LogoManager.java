@@ -8,7 +8,7 @@ public class LogoManager {
 
 
     public static void initializeDefaultLogoList() {
-        //Initalizing 5 default logos to be added into program at start
+        //Initalizing default logos to be added into program at start
         Logo logo1 = null;
         Logo logo2 = null;
         Logo logo3 = null;
@@ -69,9 +69,6 @@ public class LogoManager {
             System.out.println(logo);
         }
 
-
-
-
     }
 
 
@@ -82,8 +79,14 @@ public class LogoManager {
     }
 
     public static ArrayList<Logo> getLogos() {
-        return new ArrayList<>(logoList); // Return a copy to prevent external modification
+        return new ArrayList<>(logoList);
     }
+
+    /**PRINT LOGO LIST
+     * Prints the provided {@code ArrayList} of logos to the console.
+     *
+     * @param logoList The {@code ArrayList} of {@code Logo} objects to be printed.
+     */
 
     public static void printLogoList(ArrayList<Logo> logoList) {
         System.out.println("_______________________________");
@@ -96,6 +99,12 @@ public class LogoManager {
         System.out.println("_______________________________\n");
     }
 
+    /**
+     * Retrieves a {@code Logo} object from the {@code logoList} by its ID.
+     *
+     * @param logoID The unique ID of the {@code Logo} to retrieve.
+     * @return The {@code Logo} object with the matching ID, or {@code null} if not found.
+     */
     public static Logo getLogoByID(String logoID) {
 
         for (Logo logoTemp : logoList) {

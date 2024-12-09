@@ -7,14 +7,16 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.ScrollPane;
 
 public class CreateColorCardController {
+    //strings to look up product ID and logo
     private String productSku;
     private String logoID;
 
+    //creating a copy of the specified logo and product objects
     private Product product;
     private Logo logo;
 
 
-
+    //Add FXML elements that have actions
     @FXML private Label logoIDLabel;
     @FXML private Label yearLabel;
     @FXML private Label productDescriptionLabel;
@@ -27,7 +29,7 @@ public class CreateColorCardController {
 
 
 
-
+// Method to set the product and logo objects for this class to the ones specified by the user in Card Info window
     public void setProductLogo(String productSku, String logoID) {
         this.logoID = logoID;
         this.productSku = productSku;
@@ -35,7 +37,7 @@ public class CreateColorCardController {
 
         product = ProductUtils.getProductBySku(productSku);
         logo = LogoManager.getLogoByID(logoID);
-
+        //Set top label text if objects passed in are not null
         if (product != null) {
             addPositions(product);
             skuLabel.setText("SKU: " + product.getSku());
@@ -58,7 +60,7 @@ public class CreateColorCardController {
         }
 
     }
-
+//method to create HBoxes
     public void createStopDetail(Logo logo, Product product) {
         stopDetailsVbox.getChildren().clear();
         for (int i = 0 ; i < logo.getNumberOfStops(); i++){
@@ -66,12 +68,12 @@ public class CreateColorCardController {
             stopDetailsVbox.getChildren().add(colorStopHBox);
 
         }
-         // Scroll to the bottom after adding content
 
     }
-
+    //Method to determine the product type, then create labels of the open positions for that product obj.
     public void addPositions(Product product) {
         positionsHBox.getChildren().clear();
+        //If Product is a standbag then create standbag labels based on standbag instance Variables
         if (product instanceof StandBag){
             StandBag standBag = (StandBag) product;
             boolean hasBallPocket = standBag.hasBallPocket();
@@ -95,6 +97,7 @@ public class CreateColorCardController {
                 positionsHBox.getChildren().add(label);
             }
         }
+        //If Product is a Staff Bag then create Staffbag labels based on Staffbag instance Variables
         if (product instanceof StaffBag){
             StaffBag staffBag = (StaffBag) product;
             boolean hasBellyPanel = staffBag.hasBellyPanel();
@@ -106,6 +109,7 @@ public class CreateColorCardController {
                 positionsHBox.getChildren().add(label);
             }
         }
+        //If Product is a hat then create hat labels based on hat instance Variables
         if (product instanceof Hat){
             Hat hat = (Hat) product;
             boolean hasRightSide = hat.hasRightSide();
@@ -136,8 +140,11 @@ public class CreateColorCardController {
 
     }
 
+    //Creates an Hbox containing a label with the stop number and thread code
+
     private HBox createColorStopHBox(int stopIndex, Product product, int i) {
         String threadCode;
+
         switch (stopIndex) {
             case 0:
                 threadCode = product.getProductColor();
@@ -162,6 +169,7 @@ public class CreateColorCardController {
 
         }
         HBox colorStopHBox = new HBox();
+        //Css Styling
         colorStopHBox.setSpacing(10);
         colorStopHBox.setStyle("-fx-padding: 10; -fx-background-color: #f0f0f0; -fx-border-color: #d3d3d3; -fx-alignment: center;");
 
@@ -171,6 +179,8 @@ public class CreateColorCardController {
         return colorStopHBox;
 
     }
+
+    //Creates a label with a product position
     private Label createPositionsLabel(String position) {
         Label label = new Label(position);
         label.setStyle("-fx-padding: 10; -fx-background-color: #5b95cf; -fx-border-color: #2c5782; -fx-border-radius: 5; -fx-background-radius: 5;");

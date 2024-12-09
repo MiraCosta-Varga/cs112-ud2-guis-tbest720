@@ -36,6 +36,10 @@ public class ProductUtils {
         ProductUtils.getProductsList().forEach(System.out::println);
     }
 
+    /**
+     * Prints all {@link Product} objects in the {@code productsList}.
+     * If the list is empty, it notifies the user that there are no products in the list.
+     */
 
     public static void printProducts() {
         if (productsList.isEmpty()) {
@@ -47,11 +51,21 @@ public class ProductUtils {
             }
         }
     }
-
+    /**
+     * Adds a new {@link Product} object to the {@code productsList}.
+     *
+     * @param product The {@link Product} object to be added to the list.
+     */
     public static void addProduct(Product product) {
         productsList.add(product);
     }
 
+
+    /**
+     * Retrieves the {@code productsList}.
+     *
+     * @return The {@code ArrayList} containing all {@link Product} objects.
+     */
     public static ArrayList<Product> getProductsList() {
         return productsList;
     }
@@ -226,6 +240,12 @@ public class ProductUtils {
         return threadCode;
     }
 
+    /**
+     * Retrieves a {@link Product} object from the {@code productsList} by its SKU.
+     *
+     * @param sku The SKU of the {@code Product} to retrieve.
+     * @return The {@code Product} object with the matching SKU, or {@code null} if no matching product is found.
+     */
     public static Product getProductBySku(String sku) {
         for (Product productTemp : productsList) {
             if (productTemp.getSku().equals(sku)) {

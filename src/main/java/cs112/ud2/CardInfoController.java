@@ -21,6 +21,7 @@ public class CardInfoController {
     private String logoID;
 
     @FXML
+    //Grab the values from the text field and pass them into the Color Card window
     private void setProductLogoValues() {
         productSku = productSkuTextField.getText();
         logoID = logoIDTextField.getText();
@@ -30,6 +31,7 @@ public class CardInfoController {
         openColorCardWindow(productSku, logoID);
     }
 
+    //Open the  colorcard window and get the information from the Card info Screen
     public void openColorCardWindow(String productSku, String logoID) {
 
          try {
@@ -40,7 +42,7 @@ public class CardInfoController {
 
             CreateColorCardController controller = loader.getController();
 
-            // Create a new stage (window)
+
             Stage colorCardStage = new Stage();
             colorCardStage.setTitle("Color Card");
             colorCardStage.setScene(new Scene(root));
